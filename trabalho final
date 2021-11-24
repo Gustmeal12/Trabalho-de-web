@@ -1,0 +1,118 @@
+Professor você falou que se fizesse um projeto interessante no java também valia, então  eu fiz  uma ficha de cadastro com as orientações objetos que ensinou, foi bem diverido.
+/ *
+	Programando em JAVA
+* /
+ 
+package javaficha;
+ 
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+ 
+public class JavaFicha {
+    nome da String estática privada;
+    privado estático int idade;
+    flutuação estática privada altura;
+    peso flutuante estático privado;
+    sexo privado estático char;
+ 
+    public static void main (String [] args) {
+         Leitura do scanner = novo Scanner (System.in);
+ 
+         Faz{
+            System.out.println ("Digite seu nome:");
+            nome = leitura.nextLine ();
+         } while (nome.length () <6 || nome.length ()> 30);
+ 
+         Faz{
+            System.out.println ("Digite sua idade:");
+            idade = leitura.nextInt ();
+         } enquanto (idade <= 0 || idade> = 100);
+ 
+         Faz{
+             System.out.println ("Digite sua altura:");
+             altura = leitura.nextFloat ();
+         } enquanto (altura <= 0);
+ 
+         Faz{
+             System.out.println ("Digite seu peso:");
+             peso = leitura.nextFloat ();
+         } enquanto (peso <= 0);
+ 
+         Faz{
+             Experimente {
+                 System.out.println ("Digite seu sexo: F ou M");
+                 sexo = (char) System.in.read ();
+             } catch (IOException ex) {
+                 Logger.getLogger (JavaFicha.class.getName ()). Log (Level.SEVERE, null, ex);
+             }
+         } enquanto (sexo! = 'F' && sexo! = 'M');
+ 
+         System.out.println ("\ nNome:" + nome);
+         System.out.println ("Idade:" + idade);
+         System.out.println ("Altura:" + altura);
+         System.out.println ("Peso:" + peso);
+         System.out.println ("Sexo:" + sexo);
+    }
+ 
+}
+
+/*
+	Programando em JAVA
+*/
+
+package javaficha;
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class JavaFicha {
+    private static String nome;
+    private static int idade;
+    private static float altura;
+    private static float peso;
+    private static char sexo;
+    
+    public static void main(String[] args) {
+         Scanner leitura = new Scanner(System.in);
+         
+         do{
+            System.out.println("Digite seu nome: ");
+            nome = leitura.nextLine();
+         }while(nome.length() <  6 || nome.length() > 30);
+         
+         do{
+            System.out.println("Digite sua idade: ");
+            idade = leitura.nextInt();
+         }while(idade <= 0  || idade >= 100);
+         
+         do{
+             System.out.println("Digite sua altura: ");
+             altura = leitura.nextFloat();
+         }while(altura <= 0);
+          
+         do{
+             System.out.println("Digite seu peso: ");
+             peso = leitura.nextFloat();
+         }while(peso <= 0);
+         
+         do{
+             try {
+                 System.out.println("Digite seu sexo: F ou M");
+                 sexo = (char) System.in.read();
+             } catch (IOException ex) {
+                 Logger.getLogger(JavaFicha.class.getName()).log(Level.SEVERE, null, ex);
+             }
+         }while(sexo != 'F' && sexo != 'M');
+         
+         System.out.println("\nNome: " + nome);
+         System.out.println("Idade: " + idade);
+         System.out.println("Altura: " + altura);
+         System.out.println("Peso: " + peso);
+         System.out.println("Sexo: " + sexo);
+    }
+    
+}
